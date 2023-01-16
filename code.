@@ -1,0 +1,22 @@
+function blockWebsite(url) {
+  // Check if the website is already blocked
+  if (!localStorage.getItem(url)) {
+    // Block the website by adding it to the local storage
+    localStorage.setItem(url, true);
+    console.log(`${url} has been blocked.`);
+  } else {
+    console.log(`${url} is already blocked.`);
+  }
+}
+
+
+You can call this function by passing in the URL of the website you want to block, like so:
+
+
+blockWebsite("https://www.example.com");
+
+
+This function uses the localStorage API to store the blocked websites. The website is added to the local storage if it's not already blocked and a message is displayed in the console. If the website is already blocked, a message is displayed in the console.
+
+You can also unblock a website by calling :
+localStorage.removeItem(url)
